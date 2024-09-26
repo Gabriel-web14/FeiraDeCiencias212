@@ -1,0 +1,254 @@
+body {
+    font-family: 'Playpen Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #ffffff;
+    overflow-x: hidden; /* Garante que não haja rolagem horizontal */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+html, body {
+    overflow-x: hidden; /* Adiciona esta linha no html para reforçar a remoção da rolagem */
+    max-width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Estilo do logo no fundo */
+.logo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 600px;
+    margin: 0 auto;
+    opacity: 0.1;
+    z-index: -1; /* Mantém o logo abaixo de todo o conteúdo */
+    pointer-events: none; /* Garante que o logo não interfira com a interação dos outros elementos */
+}
+
+/* Estilo do header */
+header {
+    background-color: #ff9bbc;
+    color: rgb(255, 255, 255);
+    padding: 15px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 20px;
+    width: calc(100% - 40px); /* Garante que o header não ultrapasse a largura da tela */
+}
+
+/* Seção de conteúdo */
+section {
+    padding: 0;
+    flex: 1;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+.texto1{
+    padding: 0;
+    flex: 1;
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+    align-content: center;
+
+}
+
+.texto2{
+    padding: 0;
+    flex: 1;
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+    align-content: center;
+}
+.texto3{
+    padding: 0;
+    flex: 1;
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+    align-content: center;
+}
+.texto4{
+    padding: 0;
+    flex: 1;
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+    align-content: center;
+}
+.texto5{
+    padding: 0;
+    flex: 1;
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+    align-content: center;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto; /* Centralizar o container */
+    max-width: 800px;
+    padding: 80px;
+    border-radius: 15px;
+    overflow: hidden; /* Para evitar que os elementos saiam da área visível */
+    height: 600px; /* Altura total do container */
+    min-height: 600px;
+}
+
+/* Estilo dos slides */
+.slideshow-container img {
+    width: 100%;
+    height: auto; /* Mantém a proporção original da imagem */
+    display: none; /* Oculta todos os slides */
+    border-radius: 15px;
+}
+
+.slideshow-container img.active {
+    display: block; /* Exibe apenas o slide ativo */
+}
+
+/* Setas de navegação */
+.prev, .next {
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Garante que as setas estejam no centro vertical */
+    width: 5%; /* Largura das setas */
+    background-color: rgba(100, 100, 100, 0.315); /* Fundo semi-transparente */
+    border-radius: 15px; /* Bordas arredondadas */
+    padding: 10px;
+    font-size: 50px; /* Tamanho da seta */
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prev {
+    left: 9px;
+}
+
+.next {
+    right: 9px;
+}
+
+/* Ajustar para telas menores */
+@media (max-width: 600px) {
+    /* Estilo do logo no fundo */
+.logo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+    opacity: 0.1;
+    z-index: -1; /* Mantém o logo abaixo de todo o conteúdo */
+    pointer-events: none; /* Garante que o logo não interfira com a interação dos outros elementos */
+}
+    .slideshow-container {
+        padding: 5px;
+        width: 100%;
+        height: 40vh; /* Altura baseada na tela para dispositivos móveis */
+        min-height: 38vh;
+        margin: 0 auto;
+        
+        
+    }
+
+    .prev, .next {
+        font-size: 30px;
+        width: 40px; /* Reduzir largura das setas em telas menores */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 10vh;
+        
+    }
+
+    .prev {
+        left: 4px;
+        
+    }
+
+    .next {
+        right: 4px;
+    }
+}
+
+
+.dot-container {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot.active {
+    background-color: #f06292;
+}
+
+/* Rodapé com fundo preto e bordas arredondadas */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+/* Personalização da barra de rolagem */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
